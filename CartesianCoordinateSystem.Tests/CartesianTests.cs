@@ -18,16 +18,16 @@ namespace CartesianCoordinateSystem.Tests
                 new KeyValuePair<char, int>('N', 15)
             };
 
-            var fodase = new CartesianPlane(8, 12);
+            var plane = new CartesianPlane(8, 12);
 
             foreach (var item in test)
             {
-                fodase.Move(item.Key, item.Value);
-                Debug.WriteLine(fodase.ToString());
+                plane.Move(item.Key, item.Value);
+                Debug.WriteLine(plane.ToString());
             }
 
-            Assert.True(fodase.AxisX == 34);
-            Assert.True(fodase.AxisY == 10);
+            Assert.True(plane.AxisX == 34);
+            Assert.True(plane.AxisY == 10);
         }
 
         [Fact]
@@ -42,16 +42,16 @@ namespace CartesianCoordinateSystem.Tests
                 new KeyValuePair<char, int>('L', 15)
             };
 
-            var fodase = new CartesianPlane(-10, 0);
+            var plane = new CartesianPlane(-10, 0);
 
             foreach (var item in test)
             {
-                fodase.Move(item.Key, item.Value);
-                Debug.WriteLine(fodase.ToString());
+                plane.Move(item.Key, item.Value);
+                Debug.WriteLine(plane.ToString());
             }
 
-            Assert.True(fodase.AxisX == -14);
-            Assert.True(fodase.AxisY == 7);
+            Assert.True(plane.AxisX == -14);
+            Assert.True(plane.AxisY == 7);
         }
 
     }
